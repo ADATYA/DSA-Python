@@ -70,3 +70,22 @@ if __name__ == '__main__':
     e=['e','t','i','a','j','z','x','b']
     b_s(e)
     print(e)
+# 4
+print()
+
+def bubble_sort(element):
+    size = len(element)
+    for a in range(size-1):
+        swap=False
+        for j in range(size-1):
+            if element[j] > element[j+1]:
+                tempurary = element[j]
+                element[j] = element[j+1]
+                element[j+1] = tempurary
+                swap = True
+        if not swap:
+            break       
+if __name__ =='__main__':
+    element=['e','y','p','q','z','m']
+    bubble_sort(element)
+    print(element)
