@@ -1,91 +1,49 @@
-#1
-def bubble_sort(element):
-    size=len(element) # need to know element size 
+def BS(element):
+    V = len(element)
 
-    # for k in range(2): 
-    # for k in range(size-1):
-    for k in range(size-1): 
-            swapped = False          # save time
-            for i in range(size-1-k): #size means index value and decrricing it n-1
-                if element[i] > element[i+1]: # compare 
-                    # swapini it..
-                    tem = element[i]
-                    element[i] =element[i+1]
-                    element[i+1] = tem
-                    swapped =True
-            if not swapped :
-                break
+    for i in range (V-1):
+        flag = 0
 
+        for j in range (V-1):
 
-if __name__ == '__main__':
-    element = [5,9,2,1,67,34,88,34]
-    element = ['roy','bikrom','sporsho','pollobi']
-
-bubble_sort(element)
-print(element)
-
-#2 
-
-print()
-
-def b_s(e):
-    s=len(e)
-    for i in range(s-1):
-        swap=False
-        for a in range(s-1-i):
-            if e[a] > e[a+1]:
-                t = e[a]
-                e[a] = e[a+1]
-                e[a+1] = t
-                swap=True
-        if not swap:
-            break
-
-if __name__ == '__main__':
-
-    e=[6,4,1,65,8,9,3,5,23,2]
-    b_s(e)
-    print(e)
-
-#3
-print()
-
-def b_s(e):
-    s=len(e)
-
-    for a in range(s-1):
-        swap=False
-        for i in range(s-1):
-            if e[i] > e[i+1]:
-                t = e[i]
-                e[i] = e[i+1]
-                e[i+1] =t
-                swap=True
-        if not swap:
-            break
-
-
-if __name__ == '__main__':
-    e=[9,4,6,8,0,3,34,3,97,1,3,566,34,65,23,87,9,4,1,5]
-    e=['e','t','i','a','j','z','x','b']
-    b_s(e)
-    print(e)
-# 4
-print()
-
-def bubble_sort(element):
-    size = len(element)
-    for a in range(size-1):
-        swap=False
-        for j in range(size-1):
-            if element[j] > element[j+1]:
-                tempurary = element[j]
+            if element[j] > element [j+1]:
+                #swaping 
+                temp = element[j]
                 element[j] = element[j+1]
-                element[j+1] = tempurary
-                swap = True
-        if not swap:
-            break       
-if __name__ =='__main__':
-    element=['e','y','p','q','z','m']
-    bubble_sort(element)
-    print(element)
+                element[j+1] = temp
+                flag = 1 
+
+        if flag ==0:
+         break
+    return element
+
+Element = [22,6,9,33,3,7,1,5]
+
+result = BS(Element)
+
+print(result)
+
+
+def bubblesort(element):
+    s = len(element)
+
+    for i in range(s-1):
+        flag = 0
+
+        for j in range(s-1):
+
+            if element[j] > element[j+1]:
+                temp = element[j]
+                element[j] = element[j+1]
+                element[j+1] = temp
+                flag = 1
+
+        if flag == 0:
+            break
+    return element
+
+ele = [12,45,7,2,8,3,5,17,47,1]
+
+result = bubblesort(ele)
+
+print(result)
