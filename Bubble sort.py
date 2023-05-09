@@ -1,3 +1,4 @@
+## 01....
 def BS(element):
     V = len(element)
 
@@ -23,6 +24,8 @@ result = BS(Element)
 
 print(result)
 
+
+## 02.....
 
 def bubblesort(element):
     s = len(element)
