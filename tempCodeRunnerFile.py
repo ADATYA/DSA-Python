@@ -1,17 +1,47 @@
-def BinarySearch(list,item):
-#     first =0
-#     last = len(list)-1
-#     found=False
-#     while(first <=last and not found):
-#         mid = (first +last)//2 #//floor divition.
-#         if list[mid] ==item :
-#             found = True
-#         else:
-#             if item <list[mid]:
-#                 last =mid-1
-#             else:
-#                 first =mid-1
-#     return found
+'''
+V = visit 
+T = traversal
+Q = queue
+G = graph
+S = sourch
 
-# print(BinarySearch([1,2,3,4,5,6],8))
-# print(BinarySearch([1,2,3,4,5],5))
+
+'''
+
+def BreathFirstSearch(G,S):
+    V= set()#travers the node
+    T =list()# bfs traversal node
+    Q = list()#queue
+
+    Q.append(S)
+    V.add(S)
+
+
+    while Q:
+        node = Q.pop(0)
+        T .append(node)
+
+        for neighber_node in G[node]:
+
+            if neighber_node not in V:
+                V.add(neighber_node) 
+                Q.append(neighber_node)
+
+    return T
+
+def main():
+
+    G = {
+        'A' :['B','C','D'],
+        'B' :['A','D','E'],
+        'C':['A','D'],
+        'D':['B','C','A','E'],
+        'E' :['B','D']
+    }
+
+    T = BreathFirstSearch(G , 'A')
+    print(f"BFS:{T}")
+
+
+    if __name__=="__main__":
+        main()
