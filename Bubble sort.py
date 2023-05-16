@@ -77,6 +77,7 @@ result = Bubblesort(ele)
 
 print(result)
 
+#4
 def bs(e):
     h  = len(e)
 
@@ -99,7 +100,7 @@ e = [22,45,67,90,1,3,57,2,69]
 r = bs(e)
 print(r)
 
-
+#5
 def bs (element):
     x = len(element)
 
@@ -123,6 +124,7 @@ EL=[23,45,76,78,1,8,7,4,37]
 result = bs(EL)
 print(result)
 
+#6
 def bS(element):
     g = len(element)
 

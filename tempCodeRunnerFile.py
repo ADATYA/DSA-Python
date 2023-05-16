@@ -1,47 +1,54 @@
-'''
-V = visit 
-T = traversal
-Q = queue
-G = graph
-S = sourch
+def binarySearch(array,x,low,high):
+
+# 	while low <=high:
+
+# 		mid =low +(high - low) //2
+
+# 		if array[mid] == x:
+# 			return mid
+
+# 		elif array [mid] < x:
+# 			low = mid+1
+
+# 		else:
+# 			high = mid -1
+
+# 	return -1
+
+# array =[3,4,5,6,7,8,9]
+# x = 4
+
+# result = binarySearch(array,x,0,len(array)-1)
+
+# if result !=-1:
+# 	print("Element is at index " +  str (result))
+# else:
+# 	print("Not found")
 
 
-'''
+# def BinarySearch(list,element,low,high):
 
-def BreathFirstSearch(G,S):
-    V= set()#travers the node
-    T =list()# bfs traversal node
-    Q = list()#queue
+# 	while low <= high:
 
-    Q.append(S)
-    V.add(S)
+# 		mid = low +(high - low)//2
 
+# 		if list[mid] == element:
+# 			return mid
 
-    while Q:
-        node = Q.pop(0)
-        T .append(node)
+# 		elif list[mid] < element:
+# 			low = mid +1
+# 		else:
+# 			high =mid -1
 
-        for neighber_node in G[node]:
+# 	return -1
 
-            if neighber_node not in V:
-                V.add(neighber_node) 
-                Q.append(neighber_node)
+# list =[2,4,5,6,7]
 
-    return T
+# element = 5  # Finding element
 
-def main():
+# result = BinarySearch(list,element,0,len(list)-1)
 
-    G = {
-        'A' :['B','C','D'],
-        'B' :['A','D','E'],
-        'C':['A','D'],
-        'D':['B','C','A','E'],
-        'E' :['B','D']
-    }
-
-    T = BreathFirstSearch(G , 'A')
-    print(f"BFS:{T}")
-
-
-    if __name__=="__main__":
-        main()
+# if result !=-1:
+# 	print("Finding the value " + str(result))
+# else:
+# 	print("not found")

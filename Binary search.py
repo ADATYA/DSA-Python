@@ -21,6 +21,6 @@ x = 4
 result = binarySearch(array,x,0,len(array)-1)
 
 if result !=-1:
-	print("Element is at index" + str(result))
+	print("Element is at index " +  str (result))
 else:
 	print("Not found")
