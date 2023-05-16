@@ -122,3 +122,26 @@ EL=[23,45,76,78,1,8,7,4,37]
 
 result = bs(EL)
 print(result)
+
+def bS(element):
+    g = len(element)
+
+    for i in range(g-1):
+        flag = 0
+
+        for j in range(g-1):
+            if element[j] >element[j+1]:
+                temp = element[j]
+                element[j] = element[j+1]
+                element[j+1] = temp
+                flag =1
+
+        if flag ==0:
+         break
+    return element
+
+ELE= [22,65,67,1,5,23,0,3]
+
+result = bS(ELE)
+print(result)
+    
